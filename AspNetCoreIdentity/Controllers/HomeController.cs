@@ -1,4 +1,5 @@
-﻿using AspNetCoreIdentity.Models;
+﻿using AspNetCoreIdentity.Extension;
+using AspNetCoreIdentity.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -25,10 +26,23 @@ namespace AspNetCoreIdentity.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
+        [Authorize(Policy = "PodeExcluir")]
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        [Authorize(Policy = "PodeEscrever")]
+        public IActionResult SecretClaimGravar()
+        {
+            return View("Privacy");
+        }
+
+        [ClaimsAuthorizeAttribute("Home","Ler")]
+        public IActionResult ClaimsCustom()
+        {
+            return View("Privacy");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

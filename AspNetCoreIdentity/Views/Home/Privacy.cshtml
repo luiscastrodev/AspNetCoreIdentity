@@ -1,6 +1,25 @@
-﻿@{
+﻿@using AspNetCoreIdentity.Extension
+
+@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+
+@{
+    if (this.IfClaim("Home","Adicionar"))
+    {
+        <p>Você só vera se tiver permissao de add</p>
+    }
+}
+
+<div>
+    @Html.ActionLink("Secret", "Secret").IfClaimShow(Context,"Home","Adicionar")
+</div>
+
+<div>
+    <br />
+    <a href="#" class="btn-danger btn @Html.Raw(this.IfClaimShow("Home","Adicionar"))">Excluir</a>
+</div>

@@ -1,4 +1,6 @@
 using AspNetCoreIdentity.Data;
+using AspNetCoreIdentity.Extension;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +35,16 @@ namespace AspNetCoreIdentity
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AspNetCoreIdentityContext>();
+
+            //claims
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("PodeExcluir", police => police.RequireClaim("PodeExcluir"));
+                options.AddPolicy("PodeLer", policy => policy.Requirements.Add(new PermissaoNecessaria("PodeLer")));
+                options.AddPolicy("PodeEscrever", policy => policy.Requirements.Add(new PermissaoNecessaria("PodeEscrever")));
+
+            }) ;
+            services.AddSingleton<IAuthorizationHandler,PermissaoNecessariaHandler>();
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
