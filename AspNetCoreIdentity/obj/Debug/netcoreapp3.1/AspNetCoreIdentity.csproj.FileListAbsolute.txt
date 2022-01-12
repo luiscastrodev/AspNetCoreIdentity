@@ -166,3 +166,5 @@ D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Areas\Ide
 D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.production.json
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.staging.json
