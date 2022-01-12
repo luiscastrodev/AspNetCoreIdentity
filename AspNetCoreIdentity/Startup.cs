@@ -1,6 +1,10 @@
 using AspNetCoreIdentity.Config;
 using AspNetCoreIdentity.Data;
 using AspNetCoreIdentity.Extension;
+using KissLog;
+using KissLog.AspNetCore;
+using KissLog.CloudListeners.RequestLogsListener;
+using KissLog.Formatters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AspNetCoreIdentity
 {
@@ -62,6 +68,12 @@ namespace AspNetCoreIdentity
             app.UseAuthorization();
 
             app.UseAuthentication();
+
+            app.UseKissLogMiddleware(options => {
+                LogConfig.ConfigureKissLog(options, Configuration);
+            });
+
+
 
             app.UseMvc(routes => routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}"));
 

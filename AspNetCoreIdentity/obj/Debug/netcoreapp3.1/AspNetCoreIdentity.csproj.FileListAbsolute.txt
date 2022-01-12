@@ -168,3 +168,11 @@ D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Areas\Ide
 D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.production.json
 D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\appsettings.staging.json
+D:\AspNetCoreIdentity\AspNetCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Teste\Index.cshtml.g.cs
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\KissLog.dll
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\KissLog.AspNetCore.dll
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\KissLog.CloudListeners.dll
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\KissLog.RestClient.dll
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\AspNetCoreIdentity\AspNetCoreIdentity\bin\Debug\netcoreapp3.1\System.Text.Json.dll
