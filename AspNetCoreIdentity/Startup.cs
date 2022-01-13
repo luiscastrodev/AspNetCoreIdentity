@@ -43,7 +43,11 @@ namespace AspNetCoreIdentity
 
             services.ResolveDependecies();
 
-            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddMvc().AddMvcOptions(op =>
+            {
+                op.EnableEndpointRouting = false;
+                //op.Filters.Add(typeof(AuditoriaFilter));
+            });
 
             services.AddControllersWithViews();
         }
